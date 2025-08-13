@@ -1,27 +1,59 @@
+/* Body styling */
 body {
     font-family: 'Bungee', cursive;
-    text-align: center;
-    padding: 50px;
-    background-color: #121212; /* dark background */
-    color: #f5f5f5;           /* light text */
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* lighter dark theme */
+    color: #f5f5f5;
+    background-image: url('football-field.jpg'); /* top-down field background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
+/* Header styling */
 header h1 {
-    color: #FFD700;            /* gold accent */
+    color: #FFD700;           /* gold accent */
     font-size: 3rem;
     text-shadow: 2px 2px #000;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    text-align: center;
 }
 
-/* Navigation styling */
+/* Navigation styling - vertical column for mobile */
+nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
 nav a {
-    color: #FFA500;           /* orange accent */
+    font-family: 'Russo One', sans-serif; /* slightly different font */
+    color: #FFA500;                     /* football-themed orange */
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    padding: 10px 0;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #FFD700;           /* highlight on hover */
+    color: #FFD700;
+}
+
+/* Mobile responsiveness */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;             /* horizontal row for larger screens */
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 0 15px;
+        padding: 0;
+    }
 }

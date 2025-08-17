@@ -20,6 +20,7 @@ body {
   color: #f1f5f9;
   padding: 20px;
   box-shadow: 2px 0 6px rgba(0,0,0,0.4);
+  transition: left 0.3s ease;
 }
 
 .sidebar h2 {
@@ -73,28 +74,66 @@ body {
   font-size: 1.1em;
   line-height: 1.6;
   max-width: 800px;
-  background-color: rgba(15, 23, 42, 0.7); /* semi-transparent box for readability */
+  background-color: rgba(15, 23, 42, 0.7);
   padding: 20px;
   border-radius: 12px;
+}
+
+/* Team links */
+.team-link {
+  font-family: 'Graduate', cursive;
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: normal;
+  display: inline-block;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+
+.team-link:hover,
+.team-link.active {
+  color: #f8fafc;
+  font-weight: bold;
 }
 
 /* Mobile layout adjustments */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* stack sidebar above content */
+    flex-direction: column;
   }
 
   .sidebar {
-    width: 100%;          /* full width, not fixed 240px */
-    padding: 15px 10px;   /* adjust padding for small screens */
-    box-shadow: none;     /* optional: remove sidebar shadow on mobile */
+    position: fixed;
+    top: 0;
+    left: -240px; /* hidden by default */
+    height: 100%;
+    width: 240px;
+    padding: 15px 10px;
+    box-shadow: 2px 0 6px rgba(0,0,0,0.4);
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    left: 0; /* slide in */
+  }
+
+  .sidebar-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    z-index: 1001;
   }
 
   .content {
-    padding: 20px;        /* reduce padding to fit smaller screens */
+    padding: 20px;
+    margin-left: 0;
   }
 
-  /* Team links stacked vertically */
   .team-link {
     display: block;
     width: 100%;
@@ -103,21 +142,7 @@ body {
   }
 }
 
-
-.team-link {
-  font-family: 'Graduate', cursive;
-  color: #94a3b8;        /* same default as sidebar */
-  text-decoration: none;
-  font-weight: normal;    /* same default as sidebar */
-  display: inline-block;
-  padding: 4px 0;
-  transition: color 0.2s, background-color 0.2s;
+/* Hide toggle button on desktop */
+.sidebar-toggle {
+  display: none;
 }
-
-.team-link:hover {
-  color: #f8fafc;         /* same hover as sidebar */
-  font-weight: bold;       /* match sidebar hover */
-}
-
-
-

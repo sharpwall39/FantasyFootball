@@ -117,17 +117,19 @@ body {
     left: 0; /* slide in */
   }
 
-  .sidebar-toggle {
-    display: block;
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: #fff;
-    z-index: 1001;
-  }
+.sidebar-toggle {
+  display: block;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  z-index: 9999; /* much higher to guarantee clickability */
+  cursor: pointer; /* ensure mobile shows pointer/tap */
+}
+
 
   .content {
     padding: 20px;

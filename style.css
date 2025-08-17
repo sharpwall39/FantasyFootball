@@ -78,17 +78,20 @@ body {
   border-radius: 12px;
 }
 
-/* Mobile-friendly sidebar stacking */
+/* Mobile adjustments for team links */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Stack sidebar above main content */
-    }
-    #sidebar {
-        width: 100%; /* Full width on mobile */
-    }
-    #main {
-        padding: 20px; /* Adjust padding for smaller screens */
-    }
+  .content ul {
+    padding-left: 0;
+  }
+  .content ul li {
+    margin: 10px 0;
+  }
+  .team-link {
+    display: block; /* stack links vertically */
+    width: 100%;    /* full width for easier tapping */
+    padding: 10px 5px; /* add some spacing */
+    box-sizing: border-box;
+  }
 }
 /* Team links match sidebar style */
 .team-link {

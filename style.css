@@ -78,35 +78,47 @@ body {
   border-radius: 12px;
 }
 
-/* Mobile adjustments for team links */
+/* Mobile layout adjustments */
 @media (max-width: 768px) {
-  .content ul {
-    padding-left: 0;
+  .container {
+    flex-direction: column; /* stack sidebar above content */
   }
-  .content ul li {
-    margin: 10px 0;
+
+  .sidebar {
+    width: 100%;          /* full width, not fixed 240px */
+    padding: 15px 10px;   /* adjust padding for small screens */
+    box-shadow: none;     /* optional: remove sidebar shadow on mobile */
   }
+
+  .content {
+    padding: 20px;        /* reduce padding to fit smaller screens */
+  }
+
+  /* Team links stacked vertically */
   .team-link {
-    display: block; /* stack links vertically */
-    width: 100%;    /* full width for easier tapping */
-    padding: 10px 5px; /* add some spacing */
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
     box-sizing: border-box;
   }
 }
 
+
 .team-link {
   font-family: 'Graduate', cursive;
-  color: #ffd700;        /* same as sidebar */
+  color: #94a3b8;        /* same default as sidebar */
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;    /* same default as sidebar */
   display: inline-block;
   padding: 4px 0;
   transition: color 0.2s, background-color 0.2s;
 }
 
 .team-link:hover {
-  color: #fff;           /* highlight on hover, same as sidebar */
-  background-color: rgba(255, 215, 0, 0.2); /* subtle background like sidebar hover */
+  color: #f8fafc;         /* same hover as sidebar */
+  font-weight: bold;       /* match sidebar hover */
+  background-color: rgba(255, 255, 255, 0.05); /* subtle background similar to sidebar effect */
 }
+
 
 

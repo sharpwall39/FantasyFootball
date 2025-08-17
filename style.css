@@ -77,3 +77,16 @@ body {
   padding: 20px;
   border-radius: 12px;
 }
+
+/* Mobile-friendly sidebar stacking */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack sidebar above main content */
+    }
+    #sidebar {
+        width: 100%; /* Full width on mobile */
+    }
+    #main {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}

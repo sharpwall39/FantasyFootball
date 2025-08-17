@@ -102,34 +102,36 @@ body {
     flex-direction: column;
   }
 
+  /* Sidebar hidden by default, slides in */
   .sidebar {
     position: fixed;
     top: 0;
-    left: -240px; /* hidden by default */
+    left: -240px;
     height: 100%;
     width: 240px;
     padding: 15px 10px;
     box-shadow: 2px 0 6px rgba(0,0,0,0.4);
     z-index: 1000;
+    background-color: #1e293b; /* explicit background to cover everything */
   }
 
   .sidebar.open {
-    left: 0; /* slide in */
+    left: 0;
   }
 
-.sidebar-toggle {
-  display: block;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: #fff;
-  z-index: 9999; /* much higher to guarantee clickability */
-  cursor: pointer; /* ensure mobile shows pointer/tap */
-}
-
+  /* Toggle button always above sidebar */
+  .sidebar-toggle {
+    display: block !important;   /* override any previous display:none */
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    z-index: 9999;   /* above sidebar */
+    cursor: pointer;
+  }
 
   .content {
     padding: 20px;
@@ -144,7 +146,9 @@ body {
   }
 }
 
-/* Hide toggle button on desktop */
-.sidebar-toggle {
-  display: none;
+/* Hide toggle on desktop */
+@media (min-width: 769px) {
+  .sidebar-toggle {
+    display: none !important; /* ensure hidden on desktop */
+  }
 }

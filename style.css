@@ -93,7 +93,7 @@ body {
 /* Team links match sidebar style */
 .team-link {
   font-family: 'Graduate', cursive;
-  color: #ffd700; /* same as sidebar links */
+  color: #94a3b8; /* same as sidebar links */
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
@@ -102,7 +102,6 @@ body {
 }
 
 .team-link:hover {
-  color: #fff; /* highlight color on hover */
-  background-color: rgba(255, 215, 0, 0.2); /* subtle background like sidebar hover */
+  color: #f8fafc; /* highlight color on hover */
 }
 

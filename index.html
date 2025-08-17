@@ -10,38 +10,63 @@
             color: #eee; 
             font-family: 'Arial', sans-serif; 
             margin: 0; 
+            display: flex; 
+        }
+        #sidebar { 
+            width: 200px; 
+            background-color: #111; 
+            padding: 20px; 
+        }
+        #sidebar a { 
+            display: block; 
+            color: #ffd700; 
+            text-decoration: none; 
+            margin: 10px 0; 
+            font-weight: bold; 
+        }
+        #sidebar a:hover { color: #fff; }
+        #main { 
+            flex: 1; 
             padding: 40px; 
         }
         h1 { color: #ffd700; }
         ul { list-style: none; padding: 0; }
         li { margin: 10px 0; }
-        a { 
+        li a { 
             color: #00ff99; 
-            text-decoration: none; 
             font-weight: bold; 
-            font-size: 18px;
+            font-size: 18px; 
+            text-decoration: none;
         }
-        a:hover { color: #fff; }
+        li a:hover { color: #fff; }
     </style>
 </head>
 <body>
-    <h1>Draft Reports</h1>
-    <p>Select a team to view their report:</p>
-    <ul>
-        <li><a href="team1.html">Team 1</a></li>
-        <li><a href="team2.html">Team 2</a></li>
-        <li><a href="team3.html">Team 3</a></li>
-        <li><a href="team4.html">Team 4</a></li>
-        <li><a href="team5.html">Team 5</a></li>
-        <li><a href="team6.html">Team 6</a></li>
-        <li><a href="team7.html">Team 7</a></li>
-        <li><a href="team8.html">Team 8</a></li>
-        <li><a href="team9.html">Team 9</a></li>
-        <li><a href="team10.html">Team 10</a></li>
-        <li><a href="team11.html">Team 11</a></li>
-        <li><a href="team12.html">Team 12</a></li>
-        <li><a href="team13.html">Team 13</a></li>
-        <li><a href="team14.html">Team 14</a></li>
-    </ul>
+    <div id="sidebar">
+        <h2>Weeks</h2>
+        <a href="week1.html">Week 1</a>
+        <a href="week2.html">Week 2</a>
+        <a href="week3.html">Week 3</a>
+    </div>
+    <div id="main">
+        <h1>Draft Reports</h1>
+        <p>Select a team to view their report:</p>
+        <ul>
+            <li><a href="team1.html">Team 1</a></li>
+            <li><a href="team2.html">Team 2</a></li>
+            <li><a href="team3.html">Team 3</a></li>
+            <li><a href="team4.html">Team 4</a></li>
+            <li><a href="team5.html">Team 5</a></li>
+            <li><a href="team6.html">Team 6</a></li>
+            <li><a href="team7.html">Team 7</a></li>
+            <li><a href="team8.html">Team 8</a></li>
+            <li><a href="team9.html">Team 9</a></li>
+            <li><a href="team10.html">Team 10</a></li>
+            <li><a href="team11.html">Team 11</a></li>
+            <li><a href="team12.html">Team 12</a></li>
+            <li><a href="team13.html">Team 13</a></li>
+            <li><a href="team14.html">Team 14</a></li>
+        </ul>
+    </div>
 </body>
 </html>

@@ -90,3 +90,19 @@ body {
         padding: 20px; /* Adjust padding for smaller screens */
     }
 }
+/* Team links match sidebar style */
+.team-link {
+  font-family: 'Graduate', cursive;
+  color: #ffd700; /* same as sidebar links */
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  padding: 4px 0;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.team-link:hover {
+  color: #fff; /* highlight color on hover */
+  background-color: rgba(255, 215, 0, 0.2); /* subtle background like sidebar hover */
+}
+

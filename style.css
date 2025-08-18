@@ -177,6 +177,14 @@ body {
   cursor: pointer;
 }
 
+/* Title inside top bar */
+.top-title {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f1f5f9;
+}
+
 /* Only show top bar on mobile */
 @media (max-width: 768px) {
   .top-bar {

@@ -106,12 +106,12 @@ body {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -440px;        /* hide completely */
-  height: 100%;
+  left: -240px;        /* hide completely */
+  height: calc(100% - 50px);
   width: 240px;
   padding: 15px 10px;
   box-shadow: 2px 0 6px rgba(0,0,0,0.4);
-  z-index: 1000;
+  z-index: 1001;
   background-color: #1e293b;
   transition: left 0.3s ease; /* smooth slide */
   overflow-y: auto;           /* scroll if needed */
@@ -167,7 +167,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0 1rem;
-  z-index: 1000; /* keep above content */
+  z-index: 1002; /* keep above content */
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 

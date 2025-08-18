@@ -5,6 +5,7 @@ body {
   display: flex;
   color: #f1f5f9;
   background-color: #0f172a; /* deep dark */
+  padding-top: 0; /* desktop default, overridden on mobile */
 }
 
 .container {
@@ -96,43 +97,75 @@ body {
   font-weight: bold;
 }
 
-/* Mobile layout adjustments */
+/* ===== Top Bar (Mobile) ===== */
+.top-bar {
+  display: none; /* hidden on desktop */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #1e293b;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 1002; /* always above sidebar */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #f1f5f9;
+  cursor: pointer;
+}
+
+.top-title {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f1f5f9;
+}
+
+/* ===== Mobile layout adjustments ===== */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
 
-  /* Sidebar hidden by default, slides in */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -240px;        /* hide completely */
-  height: calc(100% - 50px);
-  width: 240px;
-  padding: 15px 10px;
-  box-shadow: 2px 0 6px rgba(0,0,0,0.4);
-  z-index: 1001;
-  background-color: #1e293b;
-  transition: left 0.3s ease; /* smooth slide */
-  overflow-y: auto;           /* scroll if needed */
-}
+  /* Sidebar hidden by default, slides in BELOW the top bar */
+  .sidebar {
+    position: fixed;
+    top: 50px;                  /* start below the top bar */
+    left: -240px;               /* fully hidden */
+    width: 240px;
+    height: calc(100% - 50px);  /* fill space under bar */
+    padding: 15px 10px;
+    box-shadow: 2px 0 6px rgba(0,0,0,0.4);
+    z-index: 1001;              /* below top bar */
+    background-color: #1e293b;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+  }
 
   .sidebar.open {
     left: 0;
   }
 
-  /* Toggle button always above sidebar */
-  .sidebar-toggle {
-    display: block !important;   /* override any previous display:none */
+  /* Overlay for clicking outside */
+  .overlay {
+    display: none;
     position: fixed;
-    top: 15px;
-    left: 15px;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: #fff;
-    z-index: 9999;   /* above sidebar */
-    cursor: pointer;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+  }
+  .overlay.active {
+    display: block;
   }
 
   .content {
@@ -146,54 +179,23 @@ body {
     padding: 10px 5px;
     box-sizing: border-box;
   }
-}
 
-/* Hide toggle on desktop */
-@media (min-width: 769px) {
-  .sidebar-toggle {
-    display: none !important; /* ensure hidden on desktop */
+  /* Make sure body pushes content below bar */
+  body {
+    padding-top: 50px;
   }
-}
 
-/* ===== Top Bar (Mobile) ===== */
-.top-bar {
-  display: none; /* hidden on desktop */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px; /* same height as hamburger */
-  background-color: #1e293b; /* dark slate (matches your theme) */
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-  z-index: 1002; /* keep above content */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-.menu-btn {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: #f1f5f9;
-  cursor: pointer;
-}
-
-/* Title inside top bar */
-.top-title {
-  margin-left: 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #f1f5f9;
-}
-
-/* Only show top bar on mobile */
-@media (max-width: 768px) {
   .top-bar {
     display: flex;
   }
+}
 
+/* ===== Desktop adjustments ===== */
+@media (min-width: 769px) {
+  .top-bar {
+    display: none;
+  }
   body {
-    padding-top: 50px; /* prevent content from being hidden under bar */
+    padding-top: 0; /* reset */
   }
 }

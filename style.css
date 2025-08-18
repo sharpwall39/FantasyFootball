@@ -103,17 +103,19 @@ body {
   }
 
   /* Sidebar hidden by default, slides in */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -240px;
-    height: 100%;
-    width: 240px;
-    padding: 15px 10px;
-    box-shadow: 2px 0 6px rgba(0,0,0,0.4);
-    z-index: 1000;
-    background-color: #1e293b; /* explicit background to cover everything */
-  }
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -240px;        /* hide completely */
+  height: 100%;
+  width: 240px;
+  padding: 15px 10px;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.4);
+  z-index: 1000;
+  background-color: #1e293b;
+  transition: left 0.3s ease; /* smooth slide */
+  overflow-y: auto;           /* scroll if needed */
+}
 
   .sidebar.open {
     left: 0;

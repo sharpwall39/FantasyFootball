@@ -152,3 +152,38 @@ body {
     display: none !important; /* ensure hidden on desktop */
   }
 }
+
+/* ===== Top Bar (Mobile) ===== */
+.top-bar {
+  display: none; /* hidden on desktop */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* same height as hamburger */
+  background-color: #1e293b; /* dark slate (matches your theme) */
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 1000; /* keep above content */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #f1f5f9;
+  cursor: pointer;
+}
+
+/* Only show top bar on mobile */
+@media (max-width: 768px) {
+  .top-bar {
+    display: flex;
+  }
+
+  body {
+    padding-top: 50px; /* prevent content from being hidden under bar */
+  }
+}

@@ -1,11 +1,10 @@
-/* Apply dark theme + footballish font */
+/* ===== Base Theme ===== */
 body {
   margin: 0;
   font-family: 'Graduate', sans-serif;
-  display: flex;
   color: #f1f5f9;
   background-color: #0f172a; /* deep dark */
-  padding-top: 0; /* desktop default, overridden on mobile */
+  padding-top: 50px; /* always leave space for top bar */
 }
 
 .container {
@@ -13,15 +12,25 @@ body {
   width: 100%;
 }
 
-/* Sidebar - desktop default */
+/* ===== Sidebar (hidden by default, slides in) ===== */
 .sidebar {
+  position: fixed;
+  top: 50px; /* sits under top bar */
+  left: 0;
   width: 240px;
+  height: calc(100% - 50px);
   background-color: #1e293b; /* dark navy slate */
   color: #f1f5f9;
   padding: 20px;
   box-shadow: 2px 0 6px rgba(0,0,0,0.4);
-  position: relative; /* visible on desktop */
-  transition: left 0.3s ease;
+  transform: translateX(-100%); /* start hidden */
+  transition: transform 0.3s ease;
+  z-index: 1001;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  transform: translateX(0);
 }
 
 .sidebar h2 {
@@ -55,7 +64,26 @@ body {
   font-weight: bold;
 }
 
-/* Content */
+/* ===== Overlay ===== */
+.overlay {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Content ===== */
 .content {
   flex: 1;
   padding: 40px;
@@ -97,9 +125,8 @@ body {
   font-weight: bold;
 }
 
-/* ===== Top Bar (Mobile) ===== */
+/* ===== Top Bar (always visible) ===== */
 .top-bar {
-  display: none; /* hidden on desktop */
   position: fixed;
   top: 0;
   left: 0;
@@ -109,7 +136,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0 1rem;
-  z-index: 1002; /* always above sidebar */
+  z-index: 1002; /* above sidebar */
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
@@ -126,76 +153,4 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   color: #f1f5f9;
-}
-
-/* ===== Mobile layout adjustments ===== */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  /* Sidebar hidden by default, slides in BELOW the top bar */
-  .sidebar {
-    position: fixed;
-    top: 50px;                  /* start below the top bar */
-    left: -300px;               /* fully hidden */
-    width: 240px;
-    height: calc(100% - 50px);  /* fill space under bar */
-    padding: 15px 10px;
-    box-shadow: 2px 0 6px rgba(0,0,0,0.4);
-    z-index: 1001;              /* below top bar */
-    background-color: #1e293b;
-    transition: left 0.3s ease;
-    overflow-y: auto;
-  }
-
-  .sidebar.open {
-    left: 0;
-  }
-
-  /* Overlay for clicking outside */
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 50px);
-    background: rgba(0,0,0,0.5);
-    z-index: 1000;
-  }
-  .overlay.active {
-    display: block;
-  }
-
-  .content {
-    padding: 20px;
-    margin-left: 0;
-  }
-
-  .team-link {
-    display: block;
-    width: 100%;
-    padding: 10px 5px;
-    box-sizing: border-box;
-  }
-
-  /* Make sure body pushes content below bar */
-  body {
-    padding-top: 50px;
-  }
-
-  .top-bar {
-    display: flex;
-  }
-}
-
-/* ===== Desktop adjustments ===== */
-@media (min-width: 769px) {
-  .top-bar {
-    display: none;
-  }
-  body {
-    padding-top: 0; /* reset */
-  }
 }

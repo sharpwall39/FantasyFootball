@@ -138,7 +138,7 @@ body {
   .sidebar {
     position: fixed;
     top: 50px;                  /* start below the top bar */
-    left: -240px;               /* fully hidden */
+    left: -300px;               /* fully hidden */
     width: 240px;
     height: calc(100% - 50px);  /* fill space under bar */
     padding: 15px 10px;

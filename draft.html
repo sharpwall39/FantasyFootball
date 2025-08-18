@@ -6,6 +6,7 @@
   <title>Longview Legion - Draft Report</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+  <script src="jscollapse.js" defer></script>
 </head>
 <body>
   
@@ -19,97 +20,36 @@
 <div class="container">
   <div id="sidebar-container"></div>
 
-<main class="content">
-  <h1>Draft Report</h1>
-  <p>Welcome to the Longview Legion Draft Report. Check the teams below chumps:</p>
+  <main class="content">
+    <h1>Draft Report</h1>
+    <p>Welcome to the Longview Legion Draft Report. Check the teams below chumps:</p>
 
-  <!-- 14 Teams -->
-<div class="team-analysis" id="team1">
-  <h2>Team 1 Analysis</h2>
+    <!-- Team 1 -->
+    <div class="team-analysis" id="team1">
+      <h2>
+        <button onclick="toggleAnalysis('team1-content')">Team 1 Analysis ▼</button>
+      </h2>
 
-  <h3>Strengths:</h3>
-  <p><strong>WR Depth:</strong> Nico Collins, Rashee Rice, Ricky Pearsall, Matthew Golden, and Emeka Egbuka provide a mix of breakout potential and solid weekly options. <em>Rice and Collins are your potential WR1/2.</em></p>
-  <p><strong>Upside RBs:</strong> Chase Brown is a high-upside pick at RB2. Braelon Allen and Omarion Hampton could deliver value if they secure work in their backfields.</p>
-  <p><strong>Quarterback:</strong> Drake Maye is a high-upside QB with rushing ability, which boosts PPR upside.</p>
+      <div id="team1-content" style="display:none;">
+        <h3>Strengths:</h3>
+        <p><strong>WR Depth:</strong> Nico Collins, Rashee Rice, Ricky Pearsall, Matthew Golden, and Emeka Egbuka provide a mix of breakout potential and solid weekly options. <em>Rice and Collins are your potential WR1/2.</em></p>
+        <p><strong>Upside RBs:</strong> Chase Brown is a high-upside pick at RB2. Braelon Allen and Omarion Hampton could deliver value if they secure work in their backfields.</p>
+        <p><strong>Quarterback:</strong> Drake Maye is a high-upside QB with rushing ability, which boosts PPR upside.</p>
 
-  <h3>Weaknesses / Risks:</h3>
-  <p><strong>RB Reliability:</strong> Outside of Chase Brown, the RB group is unproven or situational. You may need to monitor waivers for a dependable RB2/Flex.</p>
-  <p><strong>TE:</strong> Chig Okonkwo is a late-round TE with some touchdown upside but limited target share.</p>
-  <p><strong>Bye Weeks:</strong> You have overlapping byes for some key WRs (Round 6-8), which may require short-term replacements.</p>
+        <h3>Weaknesses / Risks:</h3>
+        <p><strong>RB Reliability:</strong> Outside of Chase Brown, the RB group is unproven or situational. You may need to monitor waivers for a dependable RB2/Flex.</p>
+        <p><strong>TE:</strong> Chig Okonkwo is a late-round TE with some touchdown upside but limited target share.</p>
+        <p><strong>Bye Weeks:</strong> You have overlapping byes for some key WRs (Round 6-8), which may require short-term replacements.</p>
 
-  <h3>Overall:</h3>
-  <p><strong>Ceiling:</strong> High, thanks to WR depth and upside RBs.</p>
-  <p><strong>Floor:</strong> Moderate, due to uncertain RB production and lack of a proven TE.</p>
-  <p><strong>Grade:</strong> B+</p>
-  <p><em>Funny Blurb:</em> “WRs aplenty, RBs a gamble, TE a mystery—this squad could fly high or make you wish you had a crystal ball.”</p>
-</div>
-  
-  <div class="team-analysis" id="team2">
-    <h2>Team 2</h2>
-    <p>Your analysis for Team 2 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-
-  <div class="team-analysis" id="team3">
-    <h2>Team 3</h2>
-    <p>Your analysis for Team 3 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-
-  <div class="team-analysis" id="team4">
-    <h2>Team 4</h2>
-    <p>Your analysis for Team 4 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-
-  <div class="team-analysis" id="team5">
-    <h2>Team 5</h2>
-    <p>Your analysis for Team 5 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-
-  <div class="team-analysis" id="team6">
-    <h2>Team 6</h2>
-    <p>Your analysis for Team 6 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-
-  <div class="team-analysis" id="team7">
-    <h2>Team 7</h2>
-    <p>Your analysis for Team 7 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-
-  <div class="team-analysis" id="team8">
-    <h2>Team 8</h2>
-    <p>Your analysis for Team 8 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-
-  <div class="team-analysis" id="team9">
-    <h2>Team 9</h2>
-    <p>Your analysis for Team 9 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-
-  <div class="team-analysis" id="team10">
-    <h2>Team 10</h2>
-    <p>Your analysis for Team 10 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-
-  <div class="team-analysis" id="team11">
-    <h2>Team 11</h2>
-    <p>Your analysis for Team 11 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-
-  <div class="team-analysis" id="team12">
-    <h2>Team 12</h2>
-    <p>Your analysis for Team 12 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-
-  <div class="team-analysis" id="team13">
-    <h2>Team 13</h2>
-    <p>Your analysis for Team 13 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-
-  <div class="team-analysis" id="team14">
-    <h2>Team 14</h2>
-    <p>Your analysis for Team 14 goes here. You can write multiple sentences, use <strong>bold</strong> or <em>italic</em> text, and it will all stay nicely styled.</p>
-  </div>
-</main>
-
+        <h3>Overall:</h3>
+        <p><strong>Ceiling:</strong> High, thanks to WR depth and upside RBs.</p>
+        <p><strong>Floor:</strong> Moderate, due to uncertain RB production and lack of a proven TE.</p>
+        <p><strong>Grade:</strong> B+</p>
+        <p><em>Funny Blurb:</em> “WRs aplenty, RBs a gamble, TE a mystery—this squad could fly high or make you wish you had a crystal ball.”</p>
+      </div>
+    </div>
+    
+  </main>
 </div>
 
 <script src="sidebar.js"></script>

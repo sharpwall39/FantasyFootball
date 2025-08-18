@@ -106,7 +106,7 @@ body {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -240px;        /* hide completely */
+  left: -440px;        /* hide completely */
   height: 100%;
   width: 240px;
   padding: 15px 10px;

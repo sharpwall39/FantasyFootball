@@ -6,8 +6,8 @@ function toggleSidebar() {
   const overlay = document.getElementById("overlay");
 
   if (sidebar && overlay) {
-    sidebar.classList.toggle("open");
-    overlay.classList.toggle("active");
+    const isOpen = sidebar.classList.toggle("open");
+    overlay.classList.toggle("active", isOpen);
   }
 }
 

@@ -11,11 +11,10 @@ function toggleAnalysis(id, button) {
 }
 
 // === Team Data ===
-// Each team now has a "name" property instead of just "number"
 const teamsData = [
   {
     id: 1,
-    name: "Longview Legion",
+    name: "Burrow My Hope of Winning",
     strengths: [
       "WR Depth: Nico Collins, Rashee Rice, Ricky Pearsall, Matthew Golden, and Emeka Egbuka provide a mix of breakout potential and solid weekly options. Rice and Collins are your potential WR1/2.",
       "Upside RBs: Chase Brown is a high-upside pick at RB2. Braelon Allen and Omarion Hampton could deliver value if they secure work in their backfields.",
@@ -33,23 +32,20 @@ const teamsData = [
       "Funny Blurb: WRs aplenty, RBs a gamble, TE a mystery—this squad could fly high or make you wish you had a crystal ball."
     ]
   },
-  {
-    id: 2,
-    name: "Gridiron Gurus",
-    strengths: ["Strength 1 Placeholder"],
-    weaknesses: ["Weakness 1 Placeholder"],
-    overall: ["Overall Placeholder"]
-  },
-  {
-    id: 3,
-    name: "Touchdown Titans",
-    strengths: ["Strength 1 Placeholder"],
-    weaknesses: ["Weakness 1 Placeholder"],
-    overall: ["Overall Placeholder"]
-  },
-  // keep going up through id: 14 with custom names
+  { id: 2, name: "Goon Squad", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  { id: 3, name: "J", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  { id: 4, name: "Deep Distrust", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  { id: 5, name: "Deseans's Happy Ending", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  { id: 6, name: "Princeton's Finest", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  { id: 7, name: "Drinking the Sauce", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  { id: 8, name: "Team Boldt", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  { id: 9, name: "Cancer Killers", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  { id: 10, name: "MEL KIPER RIGOS", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  { id: 11, name: "Elder Academy at Chapel Hill", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  { id: 12, name: "The People Parsons", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  { id: 13, name: "Aztec Warriors", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  { id: 14, name: "The fastest Rigos", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] }
 ];
-
 // === Generator ===
 function generateTeams(teams) {
   const container = document.getElementById("teams-container");

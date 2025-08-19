@@ -11,10 +11,11 @@ function toggleAnalysis(id, button) {
 }
 
 // === Team Data ===
-// You just edit this object to update all your reports
+// Each team now has a "name" property instead of just "number"
 const teamsData = [
   {
-    number: 1,
+    id: 1,
+    name: "Longview Legion",
     strengths: [
       "WR Depth: Nico Collins, Rashee Rice, Ricky Pearsall, Matthew Golden, and Emeka Egbuka provide a mix of breakout potential and solid weekly options. Rice and Collins are your potential WR1/2.",
       "Upside RBs: Chase Brown is a high-upside pick at RB2. Braelon Allen and Omarion Hampton could deliver value if they secure work in their backfields.",
@@ -33,18 +34,20 @@ const teamsData = [
     ]
   },
   {
-    number: 2,
+    id: 2,
+    name: "Gridiron Gurus",
     strengths: ["Strength 1 Placeholder"],
     weaknesses: ["Weakness 1 Placeholder"],
     overall: ["Overall Placeholder"]
   },
   {
-    number: 3,
+    id: 3,
+    name: "Touchdown Titans",
     strengths: ["Strength 1 Placeholder"],
     weaknesses: ["Weakness 1 Placeholder"],
     overall: ["Overall Placeholder"]
   },
-  // keep adding up through 14
+  // keep going up through id: 14 with custom names
 ];
 
 // === Generator ===
@@ -54,13 +57,13 @@ function generateTeams(teams) {
   teams.forEach(team => {
     const teamDiv = document.createElement("div");
     teamDiv.className = "team-analysis";
-    teamDiv.id = `team${team.number}`;
+    teamDiv.id = `team${team.id}`;
 
     teamDiv.innerHTML = `
       <h2>
-        <button onclick="toggleAnalysis('team${team.number}-content', this)">Team ${team.number} Analysis</button>
+        <button onclick="toggleAnalysis('team${team.id}-content', this)">${team.name} Analysis</button>
       </h2>
-      <div id="team${team.number}-content" style="display:none;">
+      <div id="team${team.id}-content" style="display:none;">
         <h3>Strengths:</h3>
         <div class="analysis-section">
           ${team.strengths.map(s => `<p><strong>${s}</strong></p>`).join("")}

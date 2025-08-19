@@ -32,7 +32,22 @@ const teamsData = [
       "Funny Blurb: WRs aplenty, RBs a gamble, TE a mystery—this squad could fly high or make you wish you had a crystal ball."
     ]
   },
-  { id: 2, name: "Goon Squad", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  {
+  "id": 2,
+  "name": "Goon Squad",
+  "strengths": [
+    "Elite RB1 production with Christian McCaffrey",
+    "Strong WR corps in PPR formats: Cooper Kupp, Jaylen Waddle, Rashee Rice, Brian Thomas Jr., Dontayvion Wicks",
+    "High-upside TE in Kyle Pitts and QB upside with Kyler Murray and Trevor Lawrence"
+  ],
+  "weaknesses": [
+    "RB depth relies on lottery tickets: De’Von Achane, Blake Corum, Jonathon Brooks, Jaylen Wright",
+    "Injury risk at key positions, especially McCaffrey and Murray"
+  ],
+  "overall": [
+    "Well-rounded, PPR-friendly team capable of top-3 finishes if health holds"
+  ]
+},
   { id: 3, name: "J", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
   { id: 4, name: "Deep Distrust", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
   { id: 5, name: "Deseans's Happy Ending", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },

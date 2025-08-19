@@ -184,3 +184,45 @@ body {
 .team-analysis textarea::placeholder {
   color: #94a3b8; /* match team links */
 }
+
+/* ===== Collapse Button Styling ===== */
+.team-analysis h2 button {
+  font-family: 'Graduate', sans-serif;
+  font-size: 1rem;
+  background-color: #1e293b; /* match sidebar */
+  color: #f1f5f9; /* light text */
+  border: 2px solid #475569; /* subtle border */
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Hover + Focus */
+.team-analysis h2 button:hover,
+.team-analysis h2 button:focus {
+  background-color: #334155; /* lighter navy */
+  border-color: #38bdf8; /* accent cyan */
+  color: #38bdf8;
+}
+
+/* Active/Expanded State */
+.team-analysis h2 button.active {
+  background-color: #0f172a; /* deep dark */
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+/* ▼ Arrow Indicator */
+.team-analysis h2 button::after {
+  content: " ▼";
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.team-analysis h2 button.active::after {
+  transform: rotate(-90deg); /* turns into ► */
+}
+

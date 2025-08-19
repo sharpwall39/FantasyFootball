@@ -45,7 +45,8 @@ const teamsData = [
     "Injury risk at key positions, especially McCaffrey and Murray"
   ],
   "overall": [
-    "Well-rounded, PPR-friendly team capable of top-3 finishes if health holds"
+        "Strengths: Elite RB1 production with Christian McCaffrey; strong WR corps in PPR formats: Cooper Kupp, Jaylen Waddle, Rashee Rice, Brian Thomas Jr., Dontayvion Wicks; high-upside TE in Kyle Pitts and QB upside with Kyler Murray and Trevor Lawrence.",
+    "Weaknesses: RB depth relies on lottery tickets: De’Von Achane, Blake Corum, Jonathon Brooks, Jaylen Wright; injury risk at key positions, especially McCaffrey and Murray."
   ]
 },
   { id: 3, name: "J", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },

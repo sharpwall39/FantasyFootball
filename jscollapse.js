@@ -57,7 +57,7 @@ function generateTeams(teams) {
 
     teamDiv.innerHTML = `
       <h2>
-        <button onclick="toggleAnalysis('team${team.id}-content', this)">${team.name} Analysis</button>
+        <button onclick="toggleAnalysis('team${team.id}-content', this)">${team.name}</button>
       </h2>
       <div id="team${team.id}-content" style="display:none;">
         <h3>Strengths:</h3>

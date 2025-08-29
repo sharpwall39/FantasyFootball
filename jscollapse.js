@@ -28,8 +28,7 @@ const teamsData = [
     overall: [
       "Ceiling: High, thanks to WR depth and upside RBs.",
       "Floor: Moderate, due to uncertain RB production and lack of a proven TE.",
-      "Grade: B+",
-      "Funny Blurb: WRs aplenty, RBs a gamble, TE a mystery—this squad could fly high or make you wish you had a crystal ball."
+      "Grade: B+"
     ]
   },
   {

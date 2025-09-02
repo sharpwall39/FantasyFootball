@@ -87,7 +87,6 @@ body {
 .content {
   flex: 1;
   padding: 40px;
-  background: url('football-field.jpg') no-repeat center center fixed;
   background-size: cover;
   overflow-y: auto;
 }

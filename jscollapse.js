@@ -49,7 +49,25 @@ const teamsData = [
   ]
 },
   { id: 3, name: "J", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
-  { id: 4, name: "Deep Distrust", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
+  {
+  "id": 4,
+  "name": "Deep Distrust",
+  "strengths": [
+    "Elite core trio with Bijan Robinson, Tyreek Hill, and Lamar Jackson providing weekly top-5 upside.",
+    "Strong positional edge at tight end with Mark Andrews in Round 6.",
+    "Upside WR depth with Calvin Ridley, Courtland Sutton, and Rashod Bateman offering ceiling plays."
+  ],
+  "weaknesses": [
+    "RB2 volatility with Cam Skattebo, Rachaad White, and Justice Hill — lack of stability behind Bijan.",
+    "WR2/3 inconsistency with Sutton and Ridley as streaky options.",
+    "Bench lacks reliable weekly starter appeal beyond Rachaad White.",
+    "Draft capital spent too early on kicker (Brandon Aubrey, Round 8) and DST (Vikings, Round 13)."
+  ],
+  "overall": [
+    "Best Value Pick: Rachaad White in Round 11 — strong dual-threat RB and potential season-saving RB2.",
+    "Grade: B- (Elite foundation with Bijan, Lamar, Tyreek, and Andrews, but fragile RB2/WR2 depth. Needs waiver wire success to contend for a title.)"
+  ]
+},
   { id: 5, name: "Deseans's Happy Ending", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
   { id: 6, name: "Princeton's Finest", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
   { id: 7, name: "Drinking the Sauce", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },

@@ -12,41 +12,26 @@ function toggleAnalysis(id, button) {
 
 // === Team Data ===
 const teamsData = [
-  {
-    id: 1,
-    name: "Burrow My Hope of Winning",
-    strengths: [
-      "WR Depth: Nico Collins, Rashee Rice, Ricky Pearsall, Matthew Golden, and Emeka Egbuka provide a mix of breakout potential and solid weekly options. Rice and Collins are your potential WR1/2.",
-      "Upside RBs: Chase Brown is a high-upside pick at RB2. Braelon Allen and Omarion Hampton could deliver value if they secure work in their backfields.",
-      "Quarterback: Drake Maye is a high-upside QB with rushing ability, which boosts PPR upside."
-    ],
-    weaknesses: [
-      "RB Reliability: Outside of Chase Brown, the RB group is unproven or situational.",
-      "TE: Chig Okonkwo is a late-round TE with some touchdown upside but limited target share.",
-      "Bye Weeks: You have overlapping byes for some key WRs (Round 6–8)."
-    ],
-    overall: [
-      "Ceiling: High, thanks to WR depth and upside RBs.",
-      "Floor: Moderate, due to uncertain RB production and lack of a proven TE.",
-      "Grade: B+"
-    ]
-  },
-  {
-  "id": 2,
-  "name": "Goon Squad",
+{
+  "id": 1,
+  "name": "Burrow My Hope of Winning",
   "strengths": [
-    "Elite RB1 production with Christian McCaffrey",
-    "Strong WR corps in PPR formats: Cooper Kupp, Jaylen Waddle, Rashee Rice, Brian Thomas Jr., Dontayvion Wicks",
-    "High-upside TE in Kyle Pitts and QB upside with Kyler Murray and Trevor Lawrence"
+    "Loaded WR corps with CeeDee Lamb, Davante Adams, Mike Evans, and Christian Kirk — elite production and depth.",
+    "Solid RB depth with Bucky Irving, Tony Pollard, Isiah Pacheco.",
+    "Upside QB/TE with Dak Prescott and Dalton Kincaid"
   ],
   "weaknesses": [
-    "RB depth relies on lottery tickets: De’Von Achane, Blake Corum, Jonathon Brooks, Jaylen Wright",
-    "Injury risk at key positions, especially McCaffrey and Murray"
+    "Nick Chubb (Round 9) is a question mark coming off injury and may not return to form.",
+    "Early DST (Round 10) and kicker (Round 11) picks reduced bench upside.",
+    "WR depth is strong but aging — Adams and Evans could regress."
   ],
   "overall": [
-        "Strengths: Elite RB1 production with Christian McCaffrey; strong WR corps in PPR formats: Cooper Kupp, Jaylen Waddle, Rashee Rice, Brian Thomas Jr., Dontayvion Wicks; high-upside TE in Kyle Pitts and QB upside with Kyler Murray and Trevor Lawrence.",
-    "Weaknesses: RB depth relies on lottery tickets: De’Von Achane, Blake Corum, Jonathon Brooks, Jaylen Wright; injury risk at key positions, especially McCaffrey and Murray."
+    "Best Value Pick: Mike Evans in Round 4 — still a red-zone monster and WR2 floor",
+    "Grade: B (One of the deepest WR rooms in the league and solid RB depth, invested too early in DST/K.",
+    "True to form, this Cowboys-loving manager drafted like Dallas plays in January — flashy start, questionable depth, and probably watching the playoffs from home again."
   ]
+}, 
+{ id: 2, name: "Goon Squad", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] }
 },
   { id: 3, name: "J", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
   {

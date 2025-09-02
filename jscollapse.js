@@ -31,7 +31,7 @@ const teamsData = [
     "True to form, this Cowboys-loving manager drafted like Dallas plays in January — flashy start, questionable depth, and probably watching the playoffs from home again."
   ]
 }, 
-{ id: 2, name: "Goon Squad", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] }
+{ id: 2, name: "Goon Squad", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
 },
   { id: 3, name: "J", strengths: ["Strength 1 Placeholder"], weaknesses: ["Weakness 1 Placeholder"], overall: ["Overall Placeholder"] },
   {

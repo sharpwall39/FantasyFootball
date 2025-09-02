@@ -27,7 +27,7 @@ const teamsData = [
   ],
   "overall": [
     "Best Value Pick: Mike Evans in Round 4 — still a red-zone monster and WR2 floor",
-    "Grade: B (One of the deepest WR rooms in the league and solid RB depth, invested too early in DST/K.",
+    "Grade: B - One of the deepest WR rooms in the league and solid RB depth, invested too early in DST/K.",
     "True to form, this Cowboys-loving manager drafted like Dallas plays in January — flashy start, questionable depth, and probably watching the playoffs from home again."
   ]
 }, 
